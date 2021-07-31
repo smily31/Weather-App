@@ -1,0 +1,61 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.banner{
+    background: linear-gradient(rgb(174, 228, 250), rgb(248, 201, 215));
+    height: 60px;
+    padding-top:20px;
+}
+
+#city-input{
+    margin: 20px;
+    height: 30px;
+    width: 40%;
+    padding: 10px;
+    text-align: center;
+}
+
+.btn{
+    width: 20%;
+    height: 40px;
+    background-color: red;
+    color: white;
+}
+
+.btn:hover{
+
+}
+
+#weather-output{
+
+}
+
+.card{
+    margin: 30px;
+
+}
+
+.card-header{
+
+}
+
+.card-body{
+}
+
+.list{
+    list-style: none;
+ 
+}
+#city-name{
+
+}
+
+#weather-type{
+
+}
