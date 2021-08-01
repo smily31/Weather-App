@@ -1,7 +1,7 @@
 /**
  * DONE: Complete getWeatherData() to return json response Promise
  * DONE: Complete searchCity() to get user input and get data using getWeatherData()
- * TODO: Complete showWeatherData() to set the data in the html file from respo
+ * DONE: Complete showWeatherData() to set the data in the html file from response
  */
 
 
@@ -38,7 +38,30 @@ searchCity = () => {
 
     getWeatherData(city).then((response)=>{
         console.log(response);
+        showWeatherData(response)
     }).catch((error) =>{
         console.log(error);
     })
+}
+
+
+/**
+ * Show the weather data in HTML
+ * HINT: make sure to console log the weatherData to see how the data looks like
+ */
+showWeatherData = (weatherData) => {
+    document.getElementById('city-name').innerText = weatherData.name;
+    document.getElementById('weather-type').innerText = weatherData.weather[0].main;
+    document.getElementById('temp').innerText = changeTemp(weatherData.main.temp);
+    document.getElementById('min-temp').innerText = changeTemp(weatherData.main.temp_min);
+    document.getElementById('max-temp').innerText = changeTemp(weatherData.main.temp_max);
+
+}
+
+
+
+// Function to change fahrenheit to celcius
+changeTemp = (temperature) => {
+    let celcius = (temperature-32)*5/9;
+    return celcius.toFixed(1);
 }
